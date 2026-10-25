@@ -17,8 +17,15 @@ public class Challenge {
     // partyRating(3, 8)    should return 0
     // partyRating(20, 6)   should return 2
     public static int partyRating(int snacks, int drinks) {
-        return -1;   // YOUR CODE
+        if (snacks < 5 || drinks < 5) {
+            return 0;
+        }
+        if (snacks >= drinks * 2 || drinks >= snacks * 2) {
+            return 2;
+        }
+        return 1;
     }
+
 
     // Count-off game.
     //   divisible by 3 AND 5  -> "FizzBuzz"
@@ -30,6 +37,15 @@ public class Challenge {
     // fizzBuzz(7)    should return "7"
     // Hint: n % 3 == 0 means "n divides evenly by 3". String.valueOf(7) gives "7".
     public static String fizzBuzz(int n) {
-        return "";   // YOUR CODE
+        if (n % 3 == 0 && n % 5 == 0) {
+            return "FizzBuzz";
+        }
+        if (n % 3 == 0) {
+            return "Fizz";
+        }
+        if (n % 5 == 0) {
+            return "Buzz";
+        }
+        return String.valueOf(n);
     }
 }
