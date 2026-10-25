@@ -14,10 +14,13 @@ package part15;
 //
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. The README shows an example.
-
+// publicly accessed class called FinalKeyword
 public class FinalKeyword {
+    // the start of the program
     public static void main(String[] args) {
+        // the value 3.14159 assigned to pi and it cannot be changed
         final double PI = 3.14159;
+        // prints PI 3.14159
         System.out.println(PI);
     }
 

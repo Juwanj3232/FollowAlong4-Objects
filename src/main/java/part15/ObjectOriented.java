@@ -15,20 +15,30 @@ package part15;
 //
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    in THIS file AND in Car.java, saying in YOUR OWN WORDS what that line does.
+// publicly accessed class called ObjectOriented
+    public class ObjectOriented {
+        // Declares the main method which serves as the entry point of the program execution
+        public static void main(String[] args) {
+            // Creates a new instance of the Car object named myCar1 using the default constructor
+            Car myCar1 = new Car();
+            // Creates a second distinct instance of the Car object named myCar2
+            Car myCar2 = new Car();
+            // Accesses and prints the make attribute (Chevrolet) belonging to the first car object
+            System.out.println(myCar1.make);
+            // Accesses and prints the model attribute (Corvette) belonging to the first car object
+            System.out.println(myCar1.model);
+            // Prints a blank line to the console for visual spacing between outputs
+            System.out.println();
+            // Accesses and prints the make attribute belonging to the second car object
+            System.out.println(myCar2.make);
+            // Accesses and prints the model attribute belonging to the second car object
+            System.out.println(myCar2.model);
+            // Invokes the drive behavior method defined inside the Car class for myCar1
+            myCar1.drive();
+            // Invokes the brake behavior method defined inside the Car class for myCar1
+            myCar1.brake();
 
-public class ObjectOriented {
-    public static void main(String[] args) {
-        Car myCar1 = new Car();
-        Car myCar2 = new Car();
-        System.out.println(myCar1.make);
-        System.out.println(myCar1.model);
-        System.out.println();
-        System.out.println(myCar2.make);
-        System.out.println(myCar2.model);
-        myCar1.drive();
-        myCar1.brake();
 
-
+        }
     }
 
-}
