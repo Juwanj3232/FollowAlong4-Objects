@@ -11,5 +11,60 @@ package part15;
 // Stretch B: your Phone class goes in THIS file, BELOW the last } of class Stretch.
 
 public class Stretch {
+    public static void main(String[] args) {
+        /* My Guess:
+        blue
+        red
+        red
+        3000.0
+         */
+        Car a = new Car();
+        Car b = new Car();
+        b.color = "red";
+        System.out.println(a.color);
+        System.out.println(b.color);
+        a = b;
+        System.out.println(a.color);
+        final double TAX_RATE = 0.06;
+        System.out.println(a.price * TAX_RATE);
 
+        // B1
+        System.out.println();
+        Phone phone = new Phone();
+        phone.charge();
+        phone.charge();
+        System.out.println(phone.brand + " battery: " + phone.battery);
+
+        // B2
+        System.out.println();
+        Phone Phone2 =  new Phone();
+        Phone2.brand = "Samsung";
+        System.out.println(phone.brand +  " / " + Phone2.brand);
+        System.out.println(phone.battery +  " / " + Phone2.battery);
+
+        // B3
+        System.out.println();
+        Phone full = new Phone();
+        full.battery = 95;
+        full.charge();
+        full.charge();
+
+
+
+    }
+
+}
+
+class Phone {
+    String brand = "Apple";
+    int battery = 80;
+    final int MAX_BATTERY = 100;
+
+    void charge() {
+        battery = battery + 10;
+        if (battery > MAX_BATTERY){
+            battery = MAX_BATTERY;
+        }
+        System.out.println("Charging... " + battery + "%");
+    }
 }
