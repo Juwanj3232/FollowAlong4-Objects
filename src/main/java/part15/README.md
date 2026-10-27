@@ -568,9 +568,9 @@ it) again, from memory.
 Fill this in before you push. Type your answers after the colons.
 
 ```
-Started:
-Finished:
-The line that took me the longest:
+Started: Sunday, October 25
+Finished: Sunday, October 25
+The line that took me the longest: Object oriented connecting to car
 ```
 
 ---
