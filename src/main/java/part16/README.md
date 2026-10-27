@@ -606,9 +606,9 @@ it) again, from memory.
 Fill this in before you push. Type your answers after the colons.
 
 ```
-Started:
-Finished:
-The line that took me the longest:
+Started: Tuesday, October 27th
+Finished: Tuesday, October 27th
+The line that took me the longest: the challenge file
 ```
 
 ---
