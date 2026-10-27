@@ -12,6 +12,8 @@ import org.junit.jupiter.api.Test;
 
 class ChallengeTest {
 
+
+
     @Test
     void doubleHi() {
         assertEquals("hhii", Challenge.doubleLetters("hi"));
