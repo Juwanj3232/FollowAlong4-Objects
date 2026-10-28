@@ -52,4 +52,9 @@ public class Pizza {
     Pizza() {
 
     }
+
+    public String toString() {
+        // Concatenates the cheese, bread, sauce and topping  separated by newline characters and returns the result
+        return bread + "\n" + sauce + "\n" + cheese + "\n" + topping;
+    }
 }
