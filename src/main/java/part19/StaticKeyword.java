@@ -15,5 +15,23 @@ package part19;
 //    saying in YOUR OWN WORDS what that line does. Do this in Friend.java too.
 
 public class StaticKeyword {
+    public static void main(String[] args) {
+
+        System.out.println(Friend.numberOfFriends);
+
+        Friend friend1 = new Friend("SpongeBob");
+
+        Friend friend2 = new Friend("Patrick");
+
+        Friend friend3 = new Friend("Squidward");
+
+        Friend.displayFriends();
+
+        Friend friend4 = new Friend("Sandy");
+        Friend.displayFriends();
+
+        System.out.println(Math.round(3.14));
+
+    }
 
 }
