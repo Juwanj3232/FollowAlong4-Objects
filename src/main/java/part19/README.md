@@ -530,9 +530,9 @@ one: a checkpoint with no video, done in class.
 Fill this in before you push. Type your answers after the colons.
 
 ```
-Started:
-Finished:
-The line that took me the longest:
+Started: Tuesday Nov, 3rd
+Finished: Tuesday Nov, 3rd
+The line that took me the longest: everything in the challenge 
 ```
 
 ---
