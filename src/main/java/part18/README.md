@@ -518,9 +518,9 @@ them.
 Fill this in before you push. Type your answers after the colons.
 
 ```
-Started:
-Finished:
-The line that took me the longest:
+Started: Monday Nov, 2nd
+Finished: Tuesday Nov, 3rd
+The line that took me the longest: understanding how to use fixTeens in sumWithoutTeens
 ```
 
 ---
