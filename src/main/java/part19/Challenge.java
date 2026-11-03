@@ -12,13 +12,19 @@ public class Challenge {
     //   roundedTotal(16, 17, 18)  → 60    (20 + 20 + 20)
     //   roundedTotal(12, 13, 14)  → 30    (10 + 10 + 10)
     public static int roundedTotal(int a, int b, int c) {
-        return 0;   // YOUR CODE — use round10
+        //round each parameter then add the rounded value to return it
+        // use round 10
+        return round10(a) + round10(b) + round10(c) ;
     }
 
     // The helper. Rounds n to the nearest 10. A last digit of 5 or more rounds UP.
     //   round10(15) → 20     round10(14) → 10     round10(20) → 20
     public static int round10(int n) {
-        return 0;   // YOUR CODE
+        int lastDigit = n % 10;
+        // ternary: if the lastdigit is larger or equal to 5
+        // if its true the n is added to the rounded down version
+        // if false take away last digit
+        return lastDigit >= 5 ? n + (10 - lastDigit) : n - lastDigit;
     }
 
     // Small bricks are 1 inch long. Big bricks are 5 inches long.
@@ -28,6 +34,22 @@ public class Challenge {
     //   canBuildWall(3, 2, 10) → true    (two big)
     // No loop needed — and with huge numbers a loop is too slow anyway.
     public static boolean canBuildWall(int small, int big, int goal) {
-        return false;   // YOUR CODE
+        // small = 1 in | big = 5 in
+        // convert how many is  big to inches and
+        int conversionBig =  big * 5;
+        // compare against goal to see if I have enough and if not return false
+        if (small + conversionBig < goal){
+            return false;
+        }
+        // bricks we can use without going over the goal
+        int maxBigBrick = goal / 5;
+
+        // as many big bricks we can use before using small ones
+        int bigBricksUsed = Math.min(big,maxBigBrick);
+
+        // find how many small bricks to use
+        int remainingBricks = goal - (bigBricksUsed * 5);
+        // answer to whether we have enough small bricks
+        return small >= remainingBricks;
     }
 }
