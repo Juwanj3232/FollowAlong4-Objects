@@ -9,6 +9,8 @@ public class Friend {
     // Declares a static variable 'numberOfFriends' shared across all instances to keep a running total count of created Friend objects
     static int numberOfFriends;
 
+    static String newestFriend;
+
     // Defines the constructor method for the Friend class that runs whenever a new Friend is instantiated with a name string
     Friend(String name){
 
@@ -18,6 +20,7 @@ public class Friend {
         // Increments the shared static 'numberOfFriends' counter by 1 every time a new friend object is successfully created
         numberOfFriends++;
 
+        newestFriend = name;
     }
 
     // Defines a static method 'displayFriends' that can be called on the class itself without needing an individual object instance
