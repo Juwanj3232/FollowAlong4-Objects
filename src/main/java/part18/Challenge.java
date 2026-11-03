@@ -13,7 +13,11 @@ public class Challenge {
     //   uniqueSum(3, 2, 3)  → 2     (both 3s are left out)
     //   uniqueSum(3, 3, 3)  → 0
     public static int uniqueSum(int a, int b, int c) {
-        return 0;   // YOUR CODE
+        // ternary function
+        int tempA = (a == b || a == c) ? 0:a;
+        int tempB = (b == a || b == c) ? 0:b;
+        int tempC = (c == b || c == a) ? 0:c;
+        return tempA + tempB + tempC;   // YOUR CODE
     }
 
     // Add up a, b and c — but "teens" (13 to 19) count as 0, EXCEPT 15 and 16, which count.
@@ -22,12 +26,21 @@ public class Challenge {
     //   sumWithoutTeens(2, 13, 1)    → 3
     //   sumWithoutTeens(15, 16, 17)  → 31
     public static int sumWithoutTeens(int a, int b, int c) {
-        return 0;   // YOUR CODE — use fixTeen
+        //take a b  and c and check if the numbers are in fixTeen before adding them
+        int TempA = fixTeen(a);
+        int TempB = fixTeen(b);
+        int TempC =fixTeen(c);
+
+        return TempA + TempB + TempC;   // YOUR CODE — use fixTeen
     }
 
     // The helper. Gives back 0 for 13, 14, 17, 18 and 19. Gives back n for everything else.
     //   fixTeen(13) → 0     fixTeen(15) → 15     fixTeen(20) → 20
     public static int fixTeen(int n) {
-        return 0;   // YOUR CODE
+        // if the n is 13,14,17,18 and 19 return 0 but for everything else return n
+        if (n == 13 ||n == 14 || n == 17 || n == 18 || n == 19){
+            return 0;
+        }
+        return n;   // YOUR CODE
     }
 }
