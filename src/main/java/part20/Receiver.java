@@ -65,9 +65,25 @@ public class Receiver{
         yards += gain;
     }
 
+    // average yards per catch, as a double so we keep the decimals (12.5, not 12)
+    public double yardsPerCatch(){
+        // no catches yet: dividing by 0 is a problem, so just give back 0.0
+        if (catches == 0){
+            // average of nothing is 0.0
+            return 0.0;
+        }
+        // (double) turns yards into a double BEFORE dividing, so it's not integer division
+        return (double) yards / catches;
+    }
+
     // toString: what gets printed when we print a Receiver object
     public String toString(){
-        // builds text like "#11 Davis: 2 catches, 20 yards"
+        // exactly 1 catch: use the singular word "catch"
+        if (catches == 1){
+            // builds text like "#84 Brooks: 1 catch, 25 yards"
+            return "#" + number + " " + name + ": " + catches + " catch, " + yards + " yards";
+        }
+        // any other number of catches: builds text like "#11 Davis: 2 catches, 20 yards"
         return "#" + number + " " + name + ": " + catches + " catches, " + yards + " yards";
     }
 
