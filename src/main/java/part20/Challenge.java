@@ -16,6 +16,12 @@ public class Challenge {
     //   anything else                               → 0
     //   ticketResult(2, 2, 2) → 10     ticketResult(1, 2, 3) → 5     ticketResult(2, 2, 1) → 0
     public static int ticketResult(int a, int b, int c) {
+        if (a == b && a == c){
+            return 10;
+        }
+        else if (a != b && a!= c){
+            return 5;
+        }
         return 0;   // YOUR CODE
     }
 
@@ -24,6 +30,19 @@ public class Challenge {
     //   sameCount("catcat", "cat", "dog")   → false   (twice and zero times)
     //   sameCount("", "cat", "dog")         → true    (zero each)
     public static boolean sameCount(String s, String x, String y) {
-        return false;   // YOUR CODE
+        return count(s, x) == count(s, y);   // YOUR CODE
+    }
+
+    // helper
+    private static int count(String s, String word) {
+        int total = 0;
+        int start = 0;
+        // indexOf gives -1 when there are no more matches
+        while ((s.indexOf(word, start)) != -1) {
+            total++;
+            // jump past this match so we look for the next one
+            start = s.indexOf(word, start) + word.length();
+        }
+        return total;
     }
 }
