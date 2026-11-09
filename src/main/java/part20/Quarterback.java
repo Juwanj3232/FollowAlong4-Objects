@@ -13,3 +13,60 @@ package part20;
 // Under these comments, type the class: public class Quarterback { ... }
 //
 // When it works, put a // comment ABOVE every line of code, in YOUR OWN WORDS (Section B).
+
+public class Quarterback {
+    private String name;
+    private int armStrength;
+    private int attempts;
+    private int completions;
+    private int passingYards;
+
+    public Quarterback(String name, int armStrength) {
+        this.name = name;
+        this.armStrength = armStrength;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAttempts() {
+        return attempts;
+    }
+
+    public int getCompletions() {
+        return completions;
+    }
+
+    public int getPassingYards() {
+        return passingYards;
+    }
+
+    public boolean throwTo(Receiver target, int yards) {
+        attempts += 1;
+        if (yards > armStrength) {
+            System.out.println(name + " -> " + target.getName() + ", " + yards + " yards: INCOMPLETE");
+            return false;
+        }
+        completions += 1;
+        passingYards += yards;
+        target.catchBall(yards);
+        System.out.println(name + " -> " + target.getName() + ", " + yards + " yards: CAUGHT");
+        return true;
+    }
+
+    public boolean throwTo(Receiver target) {
+        return throwTo(target, 10);
+    }
+
+    public int completionPercentage() {
+        if (attempts == 0) {
+            return 0;
+        }
+        return completions * 100 / attempts;
+    }
+
+    public String toString() {
+        return name + ": " + completions + "/" + attempts + ", " + passingYards + " yards, " + completionPercentage() + "%";
+    }
+}

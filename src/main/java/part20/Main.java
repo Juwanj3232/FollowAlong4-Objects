@@ -17,12 +17,12 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("=== Part 20 checkpoint ===");
-        // step1();
-        // step2();
-        // step3();
-        // step4();
-        // step5();
-        // step6();
+        step1();
+        step2();
+        step3();
+        step4();
+        step5();
+        step6();
     }
 
     static void header(String title) {
@@ -31,7 +31,7 @@ public class Main {
     }
 
     // Step 1 — Receiver: fields, constructor, getters
-    /*
+
     static void step1() {
         header("Step 1");
         Receiver davis = new Receiver("Davis", 11);
@@ -39,10 +39,10 @@ public class Main {
         System.out.println("catches: " + davis.getCatches());
         System.out.println("yards: " + davis.getYards());
     }
-    */
+
 
     // Step 2 — Receiver: catchBall and toString
-    /*
+
     static void step2() {
         header("Step 2");
         Receiver davis = new Receiver("Davis", 11);
@@ -50,20 +50,17 @@ public class Main {
         davis.catchBall(8);
         System.out.println(davis);
     }
-    */
+    
 
     // Step 3 — Quarterback: fields, constructor, getters
-    /*
     static void step3() {
         header("Step 3");
         Quarterback carter = new Quarterback("Carter", 40);
         System.out.println(carter.getName() + " has thrown " + carter.getAttempts() + " passes");
         System.out.println(carter.getCompletions() + " completions, " + carter.getPassingYards() + " yards");
     }
-    */
 
     // Step 4 — Quarterback: throwTo(Receiver, int)
-    /*
     static void step4() {
         header("Step 4");
         Quarterback carter = new Quarterback("Carter", 40);
@@ -77,10 +74,8 @@ public class Main {
         System.out.println(davis);
         System.out.println(brooks);
     }
-    */
 
     // Step 5 — Quarterback: completionPercentage and toString
-    /*
     static void step5() {
         header("Step 5");
         Quarterback carter = new Quarterback("Carter", 40);
@@ -92,10 +87,8 @@ public class Main {
 
         System.out.println(carter);
     }
-    */
 
     // Step 6 — Quarterback: overloaded throwTo(Receiver)
-    /*
     static void step6() {
         header("Step 6");
         Quarterback carter = new Quarterback("Carter", 40);
@@ -106,5 +99,4 @@ public class Main {
 
         System.out.println(brooks);
     }
-    */
 }
